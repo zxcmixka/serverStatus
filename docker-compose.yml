@@ -1,0 +1,9 @@
+services:
+  telegram-monitor:
+    build: .
+    container_name: tg-server-monitor
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - /:/hostfs:ro
